@@ -1,4 +1,4 @@
-FROM elixir:1.9.1-slim
+FROM elixir:1.9.4-slim
 
 ENV APP_DIR /var/opt/app
 
@@ -8,10 +8,8 @@ RUN set -x && \
   ca-certificates \
   build-essential \
   erlang-dev \
-  mysql-client \
   inotify-tools \
   git \
-  pgcli \
   curl
 
 RUN useradd -m -s /bin/bash elixir
