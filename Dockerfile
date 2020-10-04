@@ -3,14 +3,15 @@ FROM elixir:1.10.4-slim
 ENV APP_DIR /var/opt/app
 
 RUN set -x && \
-  apt-get update && \
-  apt-get install -y --no-install-recommends \
-  ca-certificates \
-  build-essential \
-  erlang-dev \
-  inotify-tools \
-  git \
-  curl
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+    ca-certificates \
+    build-essential \
+    erlang-dev \
+    inotify-tools \
+    git \
+    curl \
+    cmake
 
 RUN useradd -m -s /bin/bash elixir
 RUN echo 'elixir:password' | chpasswd
