@@ -10,8 +10,7 @@ RUN set -x && \
     erlang-dev \
     inotify-tools \
     git \
-    curl \
-    cmake
+    curl
 
 RUN useradd -m -s /bin/bash elixir
 RUN echo 'elixir:password' | chpasswd
