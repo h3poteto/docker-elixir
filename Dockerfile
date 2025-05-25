@@ -1,4 +1,4 @@
-FROM elixir:1.18.3-slim
+FROM elixir:1.18.4-slim
 
 ENV APP_DIR /var/opt/app
 
@@ -10,7 +10,8 @@ RUN set -x && \
     erlang-dev \
     inotify-tools \
     git \
-    curl
+    curl \
+    imagemagick
 
 RUN useradd -m -s /bin/bash elixir
 RUN echo 'elixir:password' | chpasswd
